@@ -9,6 +9,7 @@ The example dataset (example_dataset.txt) is made of 400 cells randomly chosen f
 
 To install the package from the source file, download the install.R file and execute:
  
-```source(install.R)
-   install.packages("~/SingleCellSignalR_0.1.0.tar.gz")
+```
+source(install.R)
+install.packages("~/SingleCellSignalR_0.1.0.tar.gz")
 ```
