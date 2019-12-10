@@ -2,7 +2,6 @@ library(SingleCellSignalR)
 
 # Define your working directory
 setwd("~/example/")
-setwd("c:/Users/simon.cabello/Documents/GitHub/Demo/")
 
 # Define the file of interest you want to work with
 file = "example_dataset.txt"
@@ -29,15 +28,11 @@ signal = cell_signaling(data = data, genes = genes, cluster = cluster,species = 
 # Create internal and interface network
 inter.net = inter_network(data = data, signal = signal, genes = genes, cluster = cluster)
 
-# Show interactions invovled in a specific pathway
-pathway = "Translocation of ZAP-70 to Immunological synapse"
-c.name = "cluster 3"
-int = pathway2interactions(pathway = pathway, c.name = c.name)
-
-intra = intra_network(goi = "ADCY9",data = data,genes = genes,cluster = cluster,coi="B-cells",signal=signal,plot = T,cell.prop = 0.2,c.names=c.names)
+# Show interactions downstream a specific receptor
+intra = intra_network(goi = "S1PR1",data = data,genes = genes,cluster = cluster,coi="cluster 3",signal=signal,plot = T,cell.prop = 0.2,c.names=c.names)
 
 # Visualization
-expression.plot(data = data$complete.dataset, name = "CD14", tsne = tsne)
-expression.plot.2(data = data$complete.dataset, name.1 = "CD40LG", name.2 = "CD40", tsne = tsne)
+expression.plot(data = data, name = "CD14", tsne = tsne)
+expression.plot.2(data = data, name.1 = "CD40LG", name.2 = "CD40", tsne = tsne)
 
 visualize(inter = signal, show.in = c(1),write.out = TRUE)

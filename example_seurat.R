@@ -4,7 +4,7 @@ library(Seurat)
 # Define your working directory
 setwd("~/example/")
 
-# Pre-processing using Seurat (ref)
+# Pre-processing using Seurat (https://satijalab.org/seurat/)
 pbmc.data <- Read10X(data.dir = "./filtered_feature_bc_matrix/")
 pbmc <- CreateSeuratObject(counts = pbmc.data, project = "pbmc1k")
 
