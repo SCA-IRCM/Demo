@@ -26,7 +26,7 @@ clust.ana = cluster_analysis(data = data, genes = genes, cluster = cluster, mark
 signal = cell_signaling(data = data, genes = genes, cluster = cluster,species = "homo sapiens")
 
 # Visualization
-visualize(inter = signal, show.in = c(1),write.out = TRUE)
+visualize(inter = signal, show.in = c(1))
 expression.plot(data = data, name = "CD14", tsne = tsne)
 expression.plot.2(data = data, name.1 = "CD40LG", name.2 = "CD40", tsne = tsne)
 
@@ -34,6 +34,6 @@ expression.plot.2(data = data, name.1 = "CD40LG", name.2 = "CD40", tsne = tsne)
 inter.net = inter_network(data = data, signal = signal, genes = genes, cluster = cluster)
 
 # Show interactions downstream a specific receptor
-intra = intra_network(goi = "S1PR1",data = data,genes = genes,cluster = cluster,coi="cluster 3",signal=signal,plot = T,cell.prop = 0.2,c.names=c.names)
+intra = intra_network(goi = "S1PR1",data = data,genes = genes,cluster = cluster,coi="cluster 3",signal=signal)
 
 
