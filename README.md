@@ -5,4 +5,4 @@ The example dataset (example_dataset.txt) is made of 400 cells randomly chosen f
 
 A R script using Seurat (https://satijalab.org/seurat/) for preprocessing is also available (example_seurat.R)   
 
-A R script for PDX dataset is also available (example_PDX.R)
+A R script for PDX datasets is also available (example_PDX.R)
